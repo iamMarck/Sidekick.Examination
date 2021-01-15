@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  sidekick.examination.docker:
+    image: ${DOCKER_REGISTRY-}sidekickexaminationdocker
+    build:
+      context: .
+      dockerfile: Sidekick.Examination.App/Dockerfile
+
+
+  sidekick.examination.app:
+    image: ${DOCKER_REGISTRY-}sidekickexaminationapp
+    build:
+      context: .
+      dockerfile: Sidekick.Examination.App/ClientApp/Dockerfile
+    ports:
+      - "4220:4220" 
+      - "49150:49150"
+    volumes:
+      - ./Sidekick.Examination.App/ClientApp:/app

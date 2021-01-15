@@ -68,6 +68,7 @@ namespace Sidekick.Examination.App
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
+                    
                 }
             });
         }
