@@ -41,7 +41,7 @@
         <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
           <div *ngIf="f.password2.errors.required">Validate Password is required</div>
           <div *ngIf="f.password2.errors.minlength">Password must be at least 6 characters</div>
-          <div *ngIf="f.password2.value != f.password.value">Password and verification password are not equal</div>
+          <div *ngIf="f.password2.errors.mustMatch">Password and verification password are not equal</div>
         </div>
       </div>
 

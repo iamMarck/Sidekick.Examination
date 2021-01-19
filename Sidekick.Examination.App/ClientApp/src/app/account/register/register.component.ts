@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService } from '../../service/account.service';
 import { AlertService } from '../../service/alert.service';
+import { MustMatch } from '../../helpers/validator.service';
 
 
 @Component({ templateUrl: 'register.component.html' })
@@ -11,6 +12,7 @@ export class RegisterComponent implements OnInit {
   form: FormGroup;
   loading = false;
   submitted = false;
+
 
   emailExist: boolean = null;
   usernameExist: boolean = null;
@@ -31,6 +33,8 @@ export class RegisterComponent implements OnInit {
       password2: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', Validators.required],
       verificationCode: ['', Validators.required],
+    }, {
+        validator: MustMatch('password', 'password2')
     });
   }
 
@@ -93,6 +97,13 @@ export class RegisterComponent implements OnInit {
           this.loading = false;
         }
       });
+  }
+
+
+  checkPasswords() {
+    let pass = this.f.password.value;
+    let confirmPass = this.f.password2.value;
+    return pass === confirmPass ? null : { notSame: true }
   }
 
   onSubmit() {
