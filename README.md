@@ -40,6 +40,6 @@
 - Angular Project is not moved to seperate project to showcase knowledge on .Net as i am also knowledgeable on doing backend and .net tasks aside from angular ts and web designing.
 
 
-#THANK YOU VERY MUCH
+# THANK YOU VERY MUCH
 
 Submitted by: [MARCK F. ANTONIO](https://www.linkedin.com/in/marck-antonio/ "MARCK F. ANTONIO")
