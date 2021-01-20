@@ -1,7 +1,7 @@
 # SideKick Examination App
 
 #### App Specs
-#####App is created on this ff technology
+##### App is created on this ff technology
 - Microsoft .NET CORE 5.0
 - GOOGLE Angular TS 8
 - Websockets are used for backend communication
