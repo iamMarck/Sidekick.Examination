@@ -28,7 +28,7 @@ npm start
 	4. Sending of verification code thru email
 		
 
-- I has able to encryp/hassed keys that was need to be able to authenticate the user account
+- I has able to encryp/hassed keys that was needed, to be able to authenticate the user account
 ```
 // *Hashing, BlobToString, Hash_Hmac can be located in:
 websocket.service.ts
