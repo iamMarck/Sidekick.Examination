@@ -25,6 +25,7 @@
 	websocket.service.ts
 
 ### Fix/Adjustment on given notes 
+- Responsive design is implemented on this App.
 - Added  [green check] badge image right after label "Username" and "Email"  from registration form. This badge shows if the given entry is already registered on the App; and validation message "given user/email already exists" will show below the input box if already registered.
 
 - I made adjustment on registration procedure verify code is now seperately entered after user gives required details the app will send the verification code based on users validated email then the seperate entry on verification code will cover the registration form.
