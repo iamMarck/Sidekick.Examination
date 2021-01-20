@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WebsocketService } from '../service/websocket.service';
+import { ValidityComponent } from '../shared/validity/validity.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { WebsocketService } from '../service/websocket.service';
   declarations: [
     LayoutComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ValidityComponent
   ],
   providers: [WebsocketService]
 })

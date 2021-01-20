@@ -21,11 +21,12 @@ export class AccountService {
     private http: HttpClient,
     private websocket: WebsocketService
   ) {
-    this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
+    this.userSubject = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem('user')));
     this.user = this.userSubject.asObservable();
   }
 
   public get userValue(): User {
+    this.userSubject = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem('user')));
     return this.userSubject.value;
   }
 
@@ -45,6 +46,13 @@ export class AccountService {
 
   }
 
+  logout() {
+    sessionStorage.clear();
+    sessionStorage.removeItem('user');
+    this.router.navigate(['/account/login']);
+    window.location.reload();
+  }
+
   login(username, password, salt): Observable<any> {
     let hassedPass = this.websocket.jsSHA_hass(password, username);
     let hmac = this.websocket.hash_hmac(hassedPass, environment.secretKey);
@@ -60,7 +68,7 @@ export class AccountService {
           var user = new User();
           user.username = username;
           user.sessionId = jsonData.sessionId;
-          localStorage.setItem('user', JSON.stringify(user));
+          sessionStorage.setItem('user', JSON.stringify(user));
           this.userSubject.next(user);
         }
 
@@ -93,7 +101,7 @@ export class AccountService {
       }));
   }
 
-  register(user: User) {
+  register(user: User, code: string) {
     //return this.http.post(`${environment.apiUrl}/users/register`, user);
     let hassedPass = this.websocket.jsSHA_hass(user.password, user.username);
     let hassedPass2 = this.websocket.jsSHA_hass(user.password2, user.username);
@@ -105,7 +113,7 @@ export class AccountService {
       password: hassedPass,
       password2: hassedPass2,
       email: user.email,
-      verificationCode: user.verificationCode
+      verificationCode: code
     };
 
     return this.websocket.send(registerCommand)

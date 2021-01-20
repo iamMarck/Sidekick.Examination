@@ -13,7 +13,9 @@ export class AppComponent {
   }
 
   logout() {
-    localStorage.clear();
-    this.router.navigate(['/login']);
+    sessionStorage.clear();
+    sessionStorage.removeItem('user');
+    this.router.navigate(['/account/login']);
+    this.accountService.logout();
   }
 }
