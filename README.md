@@ -21,17 +21,17 @@
 
 	
 - I has able to encryp/hassed keys that was need to be able to authenticate the user account
-			//Hashing, BlobToString, Hash_Hmac can be located in:
-			websocket.service.ts
+	//Hashing, BlobToString, Hash_Hmac can be located in:
+	websocket.service.ts
 
-###Fix/Adjustment on given notes 
+### Fix/Adjustment on given notes 
 - Added  [green check] badge image right after label "Username" and "Email"  from registration form. This badge shows if the given entry is already registered on the App; and validation message "given user/email already exists" will show below the input box if already registered.
 
 - I made adjustment on registration procedure verify code is now seperately entered after user gives required details the app will send the verification code based on users validated email then the seperate entry on verification code will cover the registration form.
 
 - Simple shared component is created 
-			//can be located on: 
-			app/shared/validity/validity.component.html
+	//can be located on: 
+	app/shared/validity/validity.component.html
 			
 
 - Logout is added to go back to login page and clear the logged user session.
