@@ -6,9 +6,16 @@
 - GOOGLE Angular TS 8
 - Websockets are used for backend communication
 
+##### Set up
+
+```
+// *Goto app directory
+npm install 
+npm start
+```
+
 ##### Authentication/Security
 - SHA-256 Hashing are used for encryptions and keyword combinations and salt are added.
-
 
 #### Implemented parts:
 - I was able to impelement websocket commands
