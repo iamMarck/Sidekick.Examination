@@ -9,7 +9,9 @@
 ##### Set up
 
 ```
-// *Goto app directory
+// *Goto app directory "Sidekick.Examination.App\ClientApp",
+// *Run on terminal
+
 npm install 
 npm start
 ```
@@ -26,10 +28,11 @@ npm start
 	4. Sending of verification code thru email
 		
 
-	
 - I has able to encryp/hassed keys that was need to be able to authenticate the user account
-	//Hashing, BlobToString, Hash_Hmac can be located in:
-	websocket.service.ts
+```
+// *Hashing, BlobToString, Hash_Hmac can be located in:
+websocket.service.ts
+```
 
 ### Fix/Adjustment on given notes 
 - Responsive design is implemented on this App.
@@ -38,9 +41,10 @@ npm start
 - I made adjustment on registration procedure verify code is now seperately entered after user gives required details the app will send the verification code based on users validated email then the seperate entry on verification code will cover the registration form.
 
 - Simple shared component is created 
-	//can be located on: 
-	app/shared/validity/validity.component.html
-			
+```
+// *Can be located on: 
+app/shared/validity/validity.component.html
+```			
 
 - Logout is added to go back to login page and clear the logged user session.
 - Revamp on overall design are made.
