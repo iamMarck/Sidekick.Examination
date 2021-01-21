@@ -37,7 +37,7 @@ Run `npm install` to fetch needed packages
 
 - I has able to encryp/hassed keys that was needed, to be able to authenticate the user account
 ```
-// *Hashing, BlobToString, Hash_Hmac can be located in:
+// *Hashing, BlobToString, Hash_Hmac can be located at:
 websocket.service.ts
 ```
 
@@ -49,7 +49,7 @@ websocket.service.ts
 
 - Simple shared component is created 
 ```
-// *Can be located on: 
+// *can be located at: 
 app/shared/validity/validity.component.html
 ```			
 
