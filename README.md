@@ -5,7 +5,7 @@
 - GOOGLE Angular TS 8
 - Websockets are used for backend communication
 
-## Set up / Development server
+## Set up / Run
 
 ### Step 1: Validate if node and npm is installed, Open a command propt (or PowerShell)
 ```
