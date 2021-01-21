@@ -1,25 +1,32 @@
 # SideKick Examination App
 
-#### App Specs
-##### App is created on this ff technology
+### App Specs
+#### App is created on this ff technology
 - Microsoft .NET CORE 5.0
 - GOOGLE Angular TS 8
 - Websockets are used for backend communication
 
-##### Set up
+#### Set up / Development server
 
+### Step 1: Validate if node and npm is installed, Open a command propt (or PowerShell)
 ```
-// *Goto app directory "Sidekick.Examination.App\ClientApp",
-// *Run on terminal
-
-npm install 
-npm start
+node -v 
+npm -v
 ```
+The system should display Node.js version and NPM installed on your PC. 
 
-##### Authentication/Security
+### Step 2: Download node packages
+Locate the project on your terminal then
+Run `npm install` to fetch needed packages 
+
+### Step 3: Local Run
+ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+#### Authentication/Security
 - SHA-256 Hashing are used for encryptions and keyword combinations and salt are added.
 
-#### Implemented parts:
+### Implemented parts:
 - I was able to impelement websocket commands
 
 	1. Login
