@@ -21,8 +21,6 @@ Run `npm install` to fetch needed packages
 ### Step 3: Local Run
  Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Live Demo
-![](Sidekick.Examination.App/live-demo.gif)
 
 ## Authentication/Security
 - SHA-256 Hashing are used for encryptions and keyword combinations and salt are added.
