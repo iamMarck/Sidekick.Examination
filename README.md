@@ -1,12 +1,12 @@
 # SideKick Examination App
 
-### App Specs
-#### App is created on this ff technology
+## App Specs
+## App is created on this ff technology
 - Microsoft .NET CORE 5.0
 - GOOGLE Angular TS 8
 - Websockets are used for backend communication
 
-#### Set up / Development server
+## Set up / Development server
 
 ### Step 1: Validate if node and npm is installed, Open a command propt (or PowerShell)
 ```
@@ -23,10 +23,10 @@ Run `npm install` to fetch needed packages
  Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-#### Authentication/Security
+## Authentication/Security
 - SHA-256 Hashing are used for encryptions and keyword combinations and salt are added.
 
-### Implemented parts:
+## Implemented parts:
 - I was able to impelement websocket commands
 
 	1. Login
@@ -41,7 +41,7 @@ Run `npm install` to fetch needed packages
 websocket.service.ts
 ```
 
-### Fix/Adjustment on given notes 
+## Fix/Adjustment on given notes 
 - Responsive design is implemented on this App.
 - Added  [green check] badge image right after label "Username" and "Email"  from registration form. This badge shows if the given entry is already registered on the App; and validation message "given user/email already exists" will show below the input box if already registered.
 
